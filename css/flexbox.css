@@ -1,0 +1,13 @@
+.cabecalhoPrincipal-titulo {
+    display: inline-block;
+    /* alinhar verticalmente no centro/meio */
+    vertical-align: middle;
+}
+
+.cabecalhoPrincipal-nav {
+    display: inline-block;
+    /* alinhar verticalmente no centro/meio */
+    vertical-align: middle;
+    /* float right -> joga para direita, porém o conteúdo que está embaixo acaba subindo */
+    float: right;
+}

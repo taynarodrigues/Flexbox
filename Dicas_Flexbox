@@ -1,0 +1,35 @@
+FLEXBOX
+
+Vamos rever alguns recursos do flexbox:
+
+display: flex: ativa o flexbox no elemento;
+align-items: distribui verticalmente os elementos dentro de um container flex;
+justify-content: distribuir os elementos espaçadamente dentro do container;
+flex-direction: permite inverter o align-items;
+order: muda a ordem dos elementos;
+flex: indica a proporção do tamanho dos elementos. Ele é um atalho para mais três propriedades:
+flex-grow: determina quanto o elemento deve crescer;
+flex-shrink: determina quanto o elemento deve diminuir;
+flex-basis: determina o tamanho mínimo do elemento.
+O flexbox é uma dentre várias outras especificações que estão surgindo no CSS para facilitar nosso trabalho com layout e deixar o código mais simples.
+
+Pegando nosso primeiro exemplo, podemos resolvê-lo usando três linhas no pai:
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+"display: flex": faz com que o container se comporte como um flexbox, ou seja, ele controlará o layout de seus filhos. Por padrão, os filhos terão a mesma altura e alinhados à esquerda;
+"align-items": center": centraliza verticalmente os elementos filhos dentro do pai;
+"justify-content: space-between": distribui entre os elementos o espaço que está sobrando.
+
+Para que serve a propriedade flex?
+Controlar o tamanho de elementos internos a um container flex.
+
+O que a declaração flex: 2 faz?
+Faz com que o elemento ocupe o dobro do espaço de elementos com flex: 1.
+
+Usando a propriedade flex - 2
+A propriedade flex aceita até 3 valores, que correspondem a 3 propriedades da especificação Flexbox. Quais propriedades são essas?
+flex-grow, flex-shrink e flex-basis
