@@ -1,13 +1,9 @@
-.cabecalhoPrincipal-titulo {
-    display: inline-block;
-    /* alinhar verticalmente no centro/meio */
-    vertical-align: middle;
-}
+/* usando o flexbox: verificar quem é o pai? */
 
-.cabecalhoPrincipal-nav {
-    display: inline-block;
-    /* alinhar verticalmente no centro/meio */
-    vertical-align: middle;
-    /* float right -> joga para direita, porém o conteúdo que está embaixo acaba subindo */
-    float: right;
+.cabecalhoPrincipal .container {
+    display: flex;
+    /* alinhar verticalmente os elementos que estão dentro desse container*/
+    align-items: center;
+    /* colocar o espaço entre os elementos usando space-between */
+    justify-content: space-between;
 }
