@@ -7,3 +7,12 @@
     /* colocar o espaço entre os elementos usando space-between */
     justify-content: space-between;
 }
+
+
+/* Colocando elementos um do lado do outro, precisa verificar Quem é o Pai deles? */
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+    /* colocar o espaço entre os elementos usando space-between */
+    justify-content: space-between;
+}
