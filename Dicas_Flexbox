@@ -133,3 +133,30 @@ align-items nós devemos colocar no pai. Dessa forma todos os seus filhos são a
 
 A propriedade align-items faz com que os elementos dentro do pai que está com flex se alinhem verticalmente, portanto, pra eles ficarem alinhados no centro podemos usar align-items: center, colocando essa propriedade no pai dos elementos que queremos alinhar, no caso cabecalho.
 
+
+Formas de espaçar os elementos
+Sabemos que a propriedade justify-content: space-between faz com que o espaço que sobrou no nosso elemento pai seja distribuído entre os filhos, porém é claro que esse não é o único valor da propriedade justify-content. Por exemplo, de que outras formas podemos distribuir esse espaço?
+
+Qual o valor da propriedade justify-content para essas distribuições de espaço?
+Podemos distribuir os elementos dentro do pai de diversas formas, podemos por exemplo:
+
+Colocar todo espaço à esquerda, jogando o conteúdo para direita com justify-content: flex-end.
+
+Colocar todo espaço à direita, jogando o conteúdo para esquerda com justify-content: flex-start (que é o padrão).
+
+Colocar todo espaço à esquerda e à direita, jogando o conteúdo para o meio com justify-content: center.
+
+Colocar todo espaço entre os elementos como vimos antes usando justify-content: space-between.
+
+E uma possibilidade bem interessante também é colocar o espaço em volta dos elementos. Podemos usar o justify-content: space-around para isso.
+
+
+Elementos na vertical
+Normalmente quando colocamos display: flex em algum elemento, os seus filhos ficam um do lado do outro. Porém existem casos em que queremos que os filhos fiquem um em baixo do outro, como podemos fazer isso?
+Podemos colocar flex-direction: column no elemento pai
+Podemos colocar flex-direction: column no pai, dessa forma ele muda o fluxo o qual o flexbox renderiza os elementos. Assim eles ficam um em baixo do outro.
+
+
+Indo para a próxima coluna
+Para arrumar nossa situação devemos falar para o flex não transbordar o conteúdo, de forma que quando o conteúdo ultrapassar o tamanho do pai, ele simplesmente quebre para uma próxima coluna. Para fazer isso usamos flex-wrap: wrap.
+
