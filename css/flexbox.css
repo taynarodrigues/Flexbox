@@ -27,8 +27,8 @@
     display: flex;
     /* alinhar no centro */
     align-items: center;
-    /* colocar espaço entre eles */
-    justify-content: space-between;
+    /* arrumando espaços INTEGRALMENTE entre  os elementos, ou seja, distribuir espaço em volta dos elementos */
+    justify-content: space-around;
     /* definir a largura do elemento da 'ul' com o width */
     width: 70%;
     /* descolar os elementos que estão juntos coloca 70% e um margin-right de 5% */
@@ -38,4 +38,10 @@
 .rodapePrincipal-contatoForm {
     /* definir a largura do formulário */
     width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    /* display: flex na div que é 'pai' do input do botão, onde o filho pega o mesmo tamanho, ele alinha o tamanho, alinha à altura dos elementos */
+    /* Portanto, o flex também deixa os filhos com a mesma aparência dos pais! */
+    display: flex;
 }
