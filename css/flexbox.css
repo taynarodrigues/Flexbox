@@ -13,6 +13,4 @@
 
 .cabecalhoPrincipal-nav {
     display: flex;
-    /* colocar o espaço entre os elementos usando space-between */
-    justify-content: space-between;
 }
