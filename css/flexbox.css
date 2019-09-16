@@ -72,19 +72,89 @@
     /* margin-bottom: 1%; */
     /* margin em todos os eixos */
     margin: 1%;
+    /* porcentagem de margem */
 }
 
 .conteudoPrincipal-cursos-link {
     /* definir tamanho para o 'li' width: 20%, porém ficou tudo aglomerado */
     width: 23%;
+    /* porcentagem na largura!  */
 }
+
+
+/* Tivemos cuidado: com os elementos à esquerda e a direita não tiver uma margem a mais nos cantos com o uso do grid 'nth-child'*/
 
 .conteudoPrincipal-cursos-link:nth-child(4n) {
     /* Tirar a margem....Pegar o 4°filho, múltiplo de 4. */
     margin-right: 0%;
 }
 
+
+/* Tivemos cuidado: com os elementos à esquerda e a direita não tiver uma margem a mais nos cantos com o uso do grid 'nth-child' */
+
 .conteudoPrincipal-cursos-link:nth-child(4n+1) {
     /* Tirar a margem....Pegar o 4°filho mais 1. */
     margin-left: 0%;
+}
+
+
+/* COMEÇANDO RESPONSIVO - PARTE MOBILE*/
+
+
+/* Não existem muitos segredos para modificar para Mobile.
+Falta um detalhe! Ao aumentar a tela, até quando ela permanece 
+com a cara do layout Mobile? Pois, mesmo colocando o tamanho 
+equivalente a tela do desktop, a aparência de um celular segue:
+Depois de 768 px é interessante que a aparência deixe de ser a do Tablet e 
+volte a ser a de Desktop. 
+Portanto, é preciso inserir um media query logo que o código de Mobile inicia. 
+ */
+
+
+/* Com isso, até 768 px ele renderiza Mobile e depois volta ao layout para Desktop! */
+
+@media(max-width: 768px) {
+    .cabecalhoPrincipal-nav {
+        flex-direction: column;
+    }
+    .cabecalhoPrincipal .container {
+        /* um debaixo do outro */
+        flex-direction: column;
+        /* sem alinhar no centro */
+        align-items: initial;
+        /* alinhar o TEXTO no centro */
+        text-align: center;
+    }
+    .conteudoPrincipal-cursos-link {
+        /* largura máxima */
+        width: 100%;
+    }
+    .conteudoPrincipal-cursos {
+        /* mudar à quebra de linha -> TIRAR A QUEBRA */
+        /* flex-wrap: nowrap; */
+        /* Vamos deixar um debaixo do outro */
+        flex-direction: column;
+    }
+    .rodapePrincipal-navMap-list {
+        /* se vira para calcular */
+        height: auto;
+    }
+    .rodapePrincipal-patrocinadores .container {
+        /* para ficar um debaixo do outro MUITO BOM*/
+        flex-direction: column;
+        /* alinhar ele no centro com relação ao texto cruzado usar o  align-items: center; */
+        align-items: center;
+    }
+    .rodapePrincipal-contatoForm {
+        /* Vamos sobreEscrever e por width: 100%; para ocupar a largura inteira */
+        width: 100%;
+    }
+    .rodapePrincipal-patrocinadores-list {
+        margin: 0%;
+        width: 100%;
+    }
+    .rodapePrincipal-contatoForm-fieldset {
+        /* concertar o formulário */
+        justify-content: center;
+    }
 }
