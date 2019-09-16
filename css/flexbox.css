@@ -14,3 +14,28 @@
 .cabecalhoPrincipal-nav {
     display: flex;
 }
+
+.rodapePrincipal-patrocinadores .container {
+    /* alinhou um do lado do outro. Perfeito!!! */
+    display: flex;
+    /* colocar o espaço entre os elementos usando space-between */
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    /* colocar o display flex no pai que é a 'ul' */
+    display: flex;
+    /* alinhar no centro */
+    align-items: center;
+    /* colocar espaço entre eles */
+    justify-content: space-between;
+    /* definir a largura do elemento da 'ul' com o width */
+    width: 70%;
+    /* descolar os elementos que estão juntos coloca 70% e um margin-right de 5% */
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+    /* definir a largura do formulário */
+    width: 25%;
+}
