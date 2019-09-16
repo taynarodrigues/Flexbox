@@ -57,4 +57,6 @@
     height: 250px;
     /* Que faça a quebra para a próxima linha, ou seja, continuasse na próx coluna 'NÃO COUBE NO PAI QUEBRA E VAI PARA A PRÓX COLUNA*/
     flex-wrap: wrap;
+    /* um atalho para juntar as duas propriedades: flex-direction: column; e   flex-wrap: wrap;*/
+    flex-flow: column wrap;
 }
