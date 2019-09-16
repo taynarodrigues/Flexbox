@@ -67,12 +67,24 @@
     /* Quebrar para a próx linha caso não haja tamanho */
     flex-wrap: wrap;
     /* flex-start joga tudo para a esquerda e o flex-end tudo para a direita */
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     /* descolar os elementos que estão juntos um margin-bottom de 1% */
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
+    /* margin em todos os eixos */
+    margin: 1%;
 }
 
 .conteudoPrincipal-cursos-link {
     /* definir tamanho para o 'li' width: 20%, porém ficou tudo aglomerado */
     width: 23%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    /* Tirar a margem....Pegar o 4°filho, múltiplo de 4. */
+    margin-right: 0%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+    /* Tirar a margem....Pegar o 4°filho mais 1. */
+    margin-left: 0%;
 }
