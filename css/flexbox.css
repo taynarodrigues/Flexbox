@@ -52,11 +52,27 @@
     /* deixa um elemento do lado do outro 'HORIZONTAL'  -> flex-direction: row;*/
     /* flex-direction: row; */
     /* deixa um elemento do lado do outro 'VERTICAL'  -> flex-direction: column;*/
-    flex-direction: column;
+    /* flex-direction: column; */
     /* e uma altura de 250px, e depois pedir para o 'WRAP' quebrar para a próx coluna*/
-    height: 250px;
-    /* Que faça a quebra para a próxima linha, ou seja, continuasse na próx coluna 'NÃO COUBE NO PAI QUEBRA E VAI PARA A PRÓX COLUNA*/
-    flex-wrap: wrap;
     /* um atalho para juntar as duas propriedades: flex-direction: column; e   flex-wrap: wrap;*/
     flex-flow: column wrap;
+    height: 250px;
+    /* Que faça a quebra para a próxima linha, ou seja, continuasse na próx coluna 'NÃO COUBE NO PAI QUEBRA E VAI PARA A PRÓX COLUNA*/
+    /* flex-wrap: wrap; */
+}
+
+.conteudoPrincipal-cursos {
+    /* para ajeitar a lista temos que colocar flexbox no pai */
+    display: flex;
+    /* Quebrar para a próx linha caso não haja tamanho */
+    flex-wrap: wrap;
+    /* flex-start joga tudo para a esquerda e o flex-end tudo para a direita */
+    justify-content: flex-end;
+    /* descolar os elementos que estão juntos um margin-bottom de 1% */
+    margin-bottom: 1%;
+}
+
+.conteudoPrincipal-cursos-link {
+    /* definir tamanho para o 'li' width: 20%, porém ficou tudo aglomerado */
+    width: 23%;
 }
