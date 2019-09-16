@@ -45,3 +45,16 @@
     /* Portanto, o flex também deixa os filhos com a mesma aparência dos pais! */
     display: flex;
 }
+
+.rodapePrincipal-navMap-list {
+    /* naturalmente o display flex distribui os elementos lado a lado */
+    display: flex;
+    /* deixa um elemento do lado do outro 'HORIZONTAL'  -> flex-direction: row;*/
+    /* flex-direction: row; */
+    /* deixa um elemento do lado do outro 'VERTICAL'  -> flex-direction: column;*/
+    flex-direction: column;
+    /* e uma altura de 250px, e depois pedir para o 'WRAP' quebrar para a próx coluna*/
+    height: 250px;
+    /* Que faça a quebra para a próxima linha, ou seja, continuasse na próx coluna 'NÃO COUBE NO PAI QUEBRA E VAI PARA A PRÓX COLUNA*/
+    flex-wrap: wrap;
+}
