@@ -98,6 +98,33 @@
 }
 
 
+/* Os elementos agora estão um do lado do outro! 
+Repare que tanto a iframe quanto a div possuem a mesma altura 
+justamente pelo comportamento do display-flex. */
+
+.videoSobre .container {
+    /* display: flex; no pai */
+    display: flex;
+}
+
+.videoSobre-sobre {
+    /* centarliza o texto */
+    text-align: center;
+    /* alinhar o botão usando o  display: flex; e mudar a direção flex-direction: column;*/
+    display: flex;
+    /* e mudar a direção */
+    flex-direction: column;
+    /* incorporar o espaço do texto Vantagens do Alurinha */
+    /* flex-grow: cresça o valor que sobrou aí na pág à direita */
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
+
 /* COMEÇANDO RESPONSIVO - PARTE MOBILE*/
 
 
@@ -156,5 +183,11 @@ Portanto, é preciso inserir um media query logo que o código de Mobile inicia.
     .rodapePrincipal-contatoForm-fieldset {
         /* concertar o formulário */
         justify-content: center;
+    }
+    /* Flex order -> mudando a ordem no HTML. Por padrão os flex-itens 
+    possuem um order: 0. Se quisermos alterar o objeto para que ele fique em primeiro lugar 
+    nós escrevemos order: -1. */
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
     }
 }
