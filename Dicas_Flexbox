@@ -1,4 +1,6 @@
 FLEXBOX
+O flexbox, que é uma especificação CSS.
+Para descobrir em quais sistemas a propriedade funciona podemos consultar o site 'Can I Use'.
 
 Vamos rever alguns recursos do flexbox:
 
@@ -33,3 +35,101 @@ Faz com que o elemento ocupe o dobro do espaço de elementos com flex: 1.
 Usando a propriedade flex - 2
 A propriedade flex aceita até 3 valores, que correspondem a 3 propriedades da especificação Flexbox. Quais propriedades são essas?
 flex-grow, flex-shrink e flex-basis
+
+
+Digamos que temos o seguinte código:
+
+<section class="pai">
+  <div class="filho">Primeiro filho</div>
+  <div class="filho">Segundo filho</div>
+</section>
+
+Colocamos:
+
+.pai {
+  display: flex;
+}
+
+O valor da propriedade display referente ao flexbox é flex.
+
+Ou seja, ficaria display: flex
+
+Espaçando com flexbox
+PRÓXIMA ATIVIDADE
+
+Vimos no primeiro exercício dessa aula que podemos espaçar os elementos que tem o pai com a propriedade display: flex de forma fácil.
+
+Veja o seguinte problema:
+
+<header class="cabecalho">
+  <a class="logo" href="#">
+    <img src="img/logo.png">
+  </a>
+
+  <ul class="menu">
+    <li class="menu-item">Item 1 do menu</li>
+    <li class="menu-item">Item 2 do menu</li>
+    <li class="menu-item">Item 3 do menu</li>
+    <li class="menu-item">Item 4 do menu</li>
+  </ul>
+</header>
+Como podemos fazer com que o menu fique do lado direito e o logo do lado esquerdo?
+
+Primeiro devemos colocar display: flex no pai, para isso fariamos:
+
+.cabecalho {
+  display: flex;
+}
+Agora automaticamente o .logo e o .menu ficam um do lado do outro.
+
+Dessa forma deve sobrar bastante espaço à direita deles. Para alocar todo esse espaço que está a direita para ficar entre eles devemos colocar a propriedade
+
+justify-content: space-between
+
+No .cabecalho, ou seja, no pai.
+
+O código para isso ficaria assim:
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+Alinhando adequadamente os elementos
+
+Bom, até agora conseguimos usar o flexbox para distribuir os elementos um do lado do outro e separá-los colocando espaço entre eles. A questão é que esses elementos podem ter alturas diferentes e dessa forma ficarem desalinhados verticalmente. Veja o seguinte código ( que é o mesmo do último exercício )
+
+<header class="cabecalho">
+  <a class="logo" href="#">
+    <img src="img/logo.png">
+  </a>
+
+  <ul class="menu">
+    <li class="menu-item">Item 1 do menu</li>
+    <li class="menu-item">Item 2 do menu</li>
+    <li class="menu-item">Item 3 do menu</li>
+    <li class="menu-item">Item 4 do menu</li>
+  </ul>
+</header>
+Bom, o css até agora está assim:
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+Tendo em vista tudo isso acima, como podemos alinhar os elementos (.menu e . logo) verticalmente?
+
+Devemos colocar align-items: center no pai, dessa forma todos os elementos ficam alinhados verticalmente no centro.
+
+O código ficaria assim:
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+align-items nós devemos colocar no pai. Dessa forma todos os seus filhos são afetados.
+
+A propriedade align-items faz com que os elementos dentro do pai que está com flex se alinhem verticalmente, portanto, pra eles ficarem alinhados no centro podemos usar align-items: center, colocando essa propriedade no pai dos elementos que queremos alinhar, no caso cabecalho.
+
