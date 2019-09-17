@@ -135,6 +135,9 @@ tem "flex-grow: 1;". O navegador pegou o espaço vazio e dividiu em dois, ou sej
 
 .videoSobre-sobre {
     flex-grow: 1;
+    /*CURIOSIDADE: diminuir mais o vídeo, quanto mais diminuimos a tela com flex-shrink: 2; tendo o valor 2 ele se mantém */
+    /* diminuir mais o vídeo, quanto mais diminuimos a tela com flex-shrink: 0; */
+    flex-shrink: 0;
 }
 
 
@@ -202,5 +205,14 @@ Portanto, é preciso inserir um media query logo que o código de Mobile inicia.
     nós escrevemos order: -1. */
     .cabecalhoPrincipal-nav-link-app {
         order: -1;
+    }
+    /* Abaixo da dimensão de 768 px é interessante que os elementos fiquem dispostos um abaixo do outro vamos inserir flex-direction */
+    .videoSobre .container {
+        /* em vez de row vire um column; porém ficou desalinhado  */
+        flex-direction: column;
+    }
+    .videoSobre-video {
+        /* para alinhamento central  */
+        margin: 0 auto;
     }
 }
