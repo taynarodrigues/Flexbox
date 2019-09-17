@@ -293,3 +293,92 @@ CURIOSIDADE
 Se ao em vez de 1 tivéssemos colocado 2 o espaço total desta parte seria dividido em 3 cabendo ao vídeo 2/3 e ao Vantagens 1/2. Da mesma maneira podemos distribuir mais espaço para o Vantagens do que para o vídeo. Assim, colocando para o Vantagens um espaço maior, flex-grow: 3; teríamos 3/4 do espaço para o vantagens.
 
 Nesse vídeo trabalhamos com flex-grow e sobre como ele divide o espaço vazio entre os flex-itens
+
+
+
+De desktop para mobile
+Quando estamos desenvolvendo um site temos que aproveitar bem o espaço da tela, para desktop podemos encaixar elementos um do lado do outro para justamente aproveitar essa largura a mais. Quando temos que adaptar nossos sites para mobile, qual o fluxo que normalmente os elementos seguem para aproveitar melhor o espaço?
+
+Como fazer com que esse fluxo seja seguido utilizando o flexbox?
+Para aproveitar o espaço precisamos colocar os elementos um em baixo do outro.
+
+Para fazer isso devemos colocar flex-direction: column.
+Para mobile devemos colocar um elemento em baixo do outro, é a melhor forma de ocupar todo o espaço para melhorar a usabilidade no celular.
+
+Para fazer isso podemos colocar a propriedade flex-direction: column, que faz com que os elementos fiquem um em baixo do outro. Esse é o aspecto mais importante da responsividade do flexbox.
+
+Flex container e flex items
+Quando colocamos display: flex em um elemento, o navegador passa a considerar esse elemento como um flex container, ou seja, cria todo aquele comportamento que vimos anteriormente no curso, os filhos ficam um do lado do outro e podemos aplicar propriedades para espaçá-los.
+
+Os filhos de um flex container por sua vez também ganham um nome, são chamados de flex items.
+
+Quando utilizamos flexbox temos que ficar atentos em quem colocamos as propriedades de espaçamento e distribuição do flex. Por exemplo, existem algumas propriedades que devem ser aplicadas à flex container e outras que devem ser aplicadas nos flex items.
+
+Propriedades do flex container e dos flex items
+
+Quais são as propriedades que funcionam SOMENTE nos flex container e quais são as que funcionam nos flex items?flex container:
+
+justify-content, align-items, flex-direction, flex-wrap
+
+flex items:
+
+order, flex-grow, flex-shrink
+
+A propriedade display: flex pode ser usada nos dois. Se for usada em um flex item esse elemento será tanto um flex item quanto um flex container.
+
+flex container:
+
+justify-content, align-items, display: flex,
+
+flex items:
+
+order, flex-grow, flex-shrink
+Existem diversos sites para consultar isso, como esse. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+O melhor a se fazer aqui é ter em mente que o ideal é sempre que necessário consultar a documentação através desse site. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Lá podemos ver claramente quais propriedades são aplicadas ao container e aos flex items, não há necessidade de ficar decorando, isso virá naturalmente com a prática.
+
+Seguindo a documentação temos:
+
+container:
+
+display: flex
+flex-direction
+justify-content
+flex-wrap
+flex-flow
+align-items
+align-content
+flex item:
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+
+
+
+Ordenando o nosso menu
+
+O nosso menu no header do site tem um link para baixar o app do Alurinha. Quando o usuário abre o nosso site com um dispositivo móvel a última opção do menu é o app. Como podemos fazer para melhorar a experiência do usuário nesse caso?
+O melhor seria mudar a ordem do menu, colocando o link de baixar o app em primeiro lugar.
+
+Podemos fazer isso com flexbox utilizando a propriedade order.
+
+
+É exatamente isso, o código ficaria assim.
+
+.cabecalhoPrincipal-nav-link-app {
+  order: -1;
+}
+
+O melhor seria mudar a ordem do menu, colocando o link de baixar o app em primeiro lugar, assim logo que o usuário abrisse a nossa página ele já encontraria o link logo de cara a baixaria nosso app.
+
+Para fazer isso devemos usar a propriedade order no nosso flex item. Podemos usar qualquer valor menor que 0 para que nosso flex item fique antes de todos.
+
+.cabecalhoPrincipal-nav-link-app {
+  order: -1;
+}
