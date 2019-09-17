@@ -114,13 +114,26 @@ justamente pelo comportamento do display-flex. */
     display: flex;
     /* e mudar a direção */
     flex-direction: column;
-    /* incorporar o espaço do texto Vantagens do Alurinha */
-    /* flex-grow: cresça o valor que sobrou aí na pág à direita */
-    flex-grow: 1;
-    justify-content: space-between;
+    /* incorporar o espaço do texto "Vantagens do Alurinha" */
+    /* flex-grow: cresça o tamnaho/valor que sobrou aí na pág à direita */
+    flex-grow: 2;
 }
 
+
+/* OBS: Tanto o "videoSobre-sobre-list" e "videoSobre-sobre" 
+tem "flex-grow: 1;". O navegador pegou o espaço vazio e dividiu em dois, ou seja, metade para cada */
+
+
+/* usando flex-grow para distribuir/aumentar o espaço vazio e empurrando o botão "cadastre-se já" lá para baixo */
+
 .videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
+
+/* o tamanho do vídeo será distribuído de maneira a dividir o espaço com a parte de "Vantagens do Alurinha" */
+
+.videoSobre-sobre {
     flex-grow: 1;
 }
 
