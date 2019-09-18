@@ -389,3 +389,34 @@ Relembrando e projeto simples
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 A documentação é um recurso útil para liquidar com dúvidas
 
+ESQUERDA                
+FLEX CONTAINER
+É O PAI 
+DISPLAY
+FLEX-DIRECTION
+FLEX-WRAP
+
+DIREITA
+FLEX-ITEMS
+SÃO OS FILHOS
+FLEX-GROW
+FLEX-SHRINK
+
+o flex-grow serve para aumentar objetos e seu padrão é flex-grow de valor 0.
+O flex-shrink que serve para diminuir os objetos.O padrão do flex-shrink é 1.
+flex-shrink:0? O resultado é que os itens não vão aceitar diminuição! O flex-shrink:0 mantém os elementos sempre com as mesmas medidas.
+se quisermos definir tanto o flex-shrink quanto o flex-grow juntos podemos utilizar o atalho do flex, por padrão o primeiro valor equivale ao grow e o segundo ao shrink:
+
+flex: 1 1;
+
+
+_____________________________________________________________Desafios e fim______________________________________________________________
+
+
+A proposta desta aula final é deixar diversos exercícios para serem feitos. Além disso, um ótimo recurso para ser utilizado é o site FlexFrog
+http://flexboxfroggy.com/
+A proposta é um jogo e nele é preciso alinhar um sapo em cima de uma plantinha. Para vencer o jogo é preciso utilizar o flexbox e dessa maneira se aprende de uma forma divertida.
+
+Outro jogo que auxilia no aprendizado é o Flex Defense no site: http://www.flexboxdefense.com/
+A proposta é alinhar as torres de maneira que elas consigam uma maior área de disparo:
+
