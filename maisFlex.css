@@ -1,0 +1,83 @@
+.flexContainer:last-child { margin-top: 2em; }
+body { margin: 0; padding: 0; }
+div { height: 50px; width: 50px; }
+/* todos os elementos possuem o mesmo tamanho */
+div:nth-child(1) { background-color: red; width: 50px; height: 50px; }
+div:nth-child(2) { background-color: blue; }
+div:nth-child(3) { background-color: green; }
+div:nth-child(4) { background-color: yellow; }
+div:nth-child(5) { background-color: pink; }
+div:nth-child(6) { background-color: black; }
+div:nth-child(7) { background-color: orange; }
+div:nth-child(7) { background-color: orange;}
+div:nth-child(8) { background-color: silver; }
+/*fim do setup*/
+
+.flexContainer {
+	display: flex;
+}
+	/* < !-- filhos flexItem --> */
+.flexItem{
+	/* distribui os espaços entre os elementos */
+
+	/* <!--flex-grow: 2;--> */
+
+	/* vamos tentar compreender quais são as contas que o flex-grow realiza, 
+	para isso é preciso retirar do código o flex-grow e dar um reload na página:
+	O navegador pega o espaço total e divide ele igualmente entre as caixas coloridas,
+	assim, elas ficam todas com o mesmo tamanho e isso ocorre pois todos os itens 
+	recebem uma fatia igual dessa divisão ! */
+
+
+	/* definir tanto o flex-shrink quanto o flex-grow juntos podemos utilizar o atalho do flex,
+	por padrão o primeiro valor equivale ao grow e o segundo ao shrink: */
+/* <!--	flex: 1 1;--> */
+
+
+	/* Uma última propriedade existente é o flex-basis que recebe o número absoluto da largura. 
+	Vamos definir o flex-grow como 0 e flex-basis como 200 px. */
+/* <!--	flex-basis: 200PX;--> */
+
+/* 
+	Ainda,
+	podemos inserir o flex-basis como terceiro argumento do flex;
+	Então,
+	teremos: */
+	flex-basis: 0 1 25%;
+
+}
+.primeiro{
+	/* O navegador pega a quantidade de espaço vazio e divide ele pela quantidade de flex-grow */
+
+/* <!--	flex-grow: 3; --> */
+
+	/* o navegador faz uma conta pegando o total do espaço e dividindo entre os flex-grow que existem. 
+	O primeiro elemento possui 3 flex-grow,o segundo, terceiro e quarto possuem apenas dois pedaços 
+	e isso soma nove pedaços (3 + 2 + 2 + 2=9). */
+
+	/* serve para diminuir as coisas
+	exemplo de 4 divs com 50px -> vai totalizar 200px */
+	/* acrescentado da propriedade flex-shrink: 2 e teremos:
+	o primeiro item se tornará duas vezes menor:
+	O valor do primeiro objeto é flex-shrink: 2 e do segundo,
+	terceiro e quarto são flex-shrink: 1. Então,
+	a soma desses elementos é 2+1+1+1=5. Como o total da tela é 100 px 
+	temos que dividir pela soma dos itens para descobrir o tamanho que cabe a cada objeto,
+	100 : 5=20 px. Portanto,
+	cada objeto corresponde a um espaço de 20 px. O primeiro elemento possui flex-shrink com valor 2,
+	então,
+	os 20 px serão diminuídos duas vezes,
+	20 px x 2=40 px. Como cada elemento originalmente possuía o tamanho de 50 px,
+	assim,
+	devemos pegar o valor do objeto e diminuir o valor que ele é diminuído e 
+	teremos o valor que ele fica: 50 px - 40 px=10 px . Por isso,
+	o primeiro terá o tamanho de 10 px e os demais objetos terão 
+	um tamanho final que é igual ao valor inicial diminuído pelas vezes que 
+	os outros objetos foram diminuídos,
+	ou seja,
+	50 px - 20 px=30 px. Assim,
+	todos os demais elementos possuem cada um o tamanho de 30 px. */
+
+/* <!--	flex-shrink: 2; --> */
+}
+

@@ -1,4 +1,4 @@
-FLEXBOX
+FLEXBOX -> https://github.com/alura-cursos
 O flexbox, que é uma especificação CSS.
 Para descobrir em quais sistemas a propriedade funciona podemos consultar o site 'Can I Use'.
 
@@ -382,3 +382,10 @@ Para fazer isso devemos usar a propriedade order no nosso flex item. Podemos usa
 .cabecalhoPrincipal-nav-link-app {
   order: -1;
 }
+
+
+Relembrando e projeto simples
+é possível sempre recorrer a consultas na documentação do Flexbox acessando o seguinte link. 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+A documentação é um recurso útil para liquidar com dúvidas
+
